@@ -55,8 +55,7 @@
 }
 
 :root {
-  /* Warm Cream background, Charcoal text */
-  --background: oklch(0.96 0.025 80);
+  --background: oklch(1 0 0); /* Clean White */
   --foreground: oklch(0.2 0.01 0);
   --card: oklch(1 0 0);
   --card-foreground: oklch(0.2 0.01 0);
