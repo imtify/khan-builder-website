@@ -1,29 +1,12 @@
 "use client";
 
 import * as React from "react";
-import { useRouter } from "next/navigation";
+import Link from "next/link";
 import { motion } from "motion/react";
-import { Search, MapPin, Building, DollarSign } from "lucide-react";
+import { ArrowRight, MapPin } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
 export function Hero() {
-  const router = useRouter();
-  const [search, setSearch] = React.useState("");
-  const [type, setType] = React.useState("all");
-  const [status, setStatus] = React.useState("all");
-
-  const handleSearch = (e: React.FormEvent) => {
-    e.preventDefault();
-
-    // Construct query parameters
-    const params = new URLSearchParams();
-    if (search) params.append("search", search);
-    if (type !== "all") params.append("type", type);
-    if (status !== "all") params.append("status", status);
-
-    router.push(`/properties?${params.toString()}`);
-  };
-
   return (
     <section className="relative min-h-screen flex items-center justify-center pt-28 pb-16 overflow-hidden bg-slate-950">
       {/* Background Image with Dark/Gold Tint Overlay */}
@@ -52,7 +35,7 @@ export function Hero() {
             className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full border border-accent/20 bg-accent/10 text-accent font-semibold text-xs tracking-wider uppercase mb-6"
           >
             <span className="w-1.5 h-1.5 rounded-full bg-accent animate-ping" />
-            The Smartest Investment in Real Estate
+            Quality Construction. Transparent Commitment.
           </motion.div>
 
           {/* Heading */}
@@ -72,89 +55,43 @@ export function Hero() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.4 }}
-            className="text-lg md:text-xl text-slate-100 font-medium max-w-2xl mb-12 leading-relaxed"
+            className="text-lg md:text-xl text-slate-100 font-medium max-w-2xl mb-10 leading-relaxed"
           >
-            A trusted real estate development partner for landowners, apartment
-            buyers and investors seeking quality construction, transparent
-            documentation and long-term value.
+            Khan Builders Ltd. delivers reliable real estate solutions through
+            quality construction, modern planning, transparent documentation,
+            and timely handover — for landowners, apartment buyers, and
+            investors alike.
           </motion.p>
 
-          {/* Search Widget */}
+          {/* CTA Buttons */}
           <motion.div
-            initial={{ opacity: 0, y: 40 }}
+            initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.6 }}
-            className="w-full max-w-4xl p-2 rounded-3xl border border-white/10 glassmorphism shadow-2xl shadow-gold"
+            className="flex flex-col sm:flex-row items-center gap-4 mb-16"
           >
-            <form
-              onSubmit={handleSearch}
-              className="flex flex-col md:flex-row items-stretch gap-2 p-2 bg-slate-950/70 dark:bg-slate-950/50 rounded-2xl"
+            <Button
+              asChild
+              size="lg"
+              className="bg-accent text-accent-foreground hover:bg-gold-dark hover:text-white font-bold rounded-full px-8 py-6 flex items-center gap-2 cursor-pointer shadow-md transition-all"
             >
-              {/* Keyword Search */}
-              <div className="flex-1 flex items-center gap-3 px-3 py-2 border-b md:border-b-0 md:border-r border-white/10 text-white">
-                <MapPin className="w-5 h-5 text-accent shrink-0" />
-                <div className="flex-1 text-left">
-                  <label className="block text-[10px] font-bold text-accent uppercase tracking-wider">
-                    Location / Project
-                  </label>
-                  <input
-                    type="text"
-                    value={search}
-                    onChange={(e) => setSearch(e.target.value)}
-                    placeholder="e.g. Mirpur, Kalshi..."
-                    className="w-full bg-transparent text-sm text-white placeholder-slate-400 font-semibold focus:outline-none mt-0.5 border-none"
-                  />
-                </div>
-              </div>
+              <Link href="/properties">
+                <span>View Properties</span>
+                <ArrowRight className="w-4 h-4" />
+              </Link>
+            </Button>
 
-              {/* Property Type Filter */}
-              <div className="w-full md:w-48 flex items-center gap-3 px-3 py-2 border-b md:border-b-0 md:border-r border-white/10 text-white">
-                <Building className="w-5 h-5 text-accent shrink-0" />
-                <div className="flex-1 text-left">
-                  <label className="block text-[10px] font-bold text-accent uppercase tracking-wider">
-                    Property Type
-                  </label>
-                  <select
-                    value={type}
-                    onChange={(e) => setType(e.target.value)}
-                    className="w-full bg-gray-900 text-sm text-white font-semibold focus:outline-none mt-0.5 border-none [color-scheme:dark] cursor-pointer"
-                  >
-                    <option value="all">All Types</option>
-                    <option value="residential">Residential</option>
-                    <option value="commercial">Commercial</option>
-                  </select>
-                </div>
-              </div>
-
-              {/* Status Filter */}
-              <div className="w-full md:w-48 flex items-center gap-3 px-3 py-2 border-b md:border-b-0 text-white">
-                <DollarSign className="w-5 h-5 text-accent shrink-0" />
-                <div className="flex-1 text-left">
-                  <label className="block text-[10px] font-bold text-accent uppercase tracking-wider">
-                    Status
-                  </label>
-                  <select
-                    value={status}
-                    onChange={(e) => setStatus(e.target.value)}
-                    className="w-full bg-gray-900 text-sm text-white font-semibold focus:outline-none mt-0.5 border-none [color-scheme:dark] cursor-pointer"
-                  >
-                    <option value="all">All Statuses</option>
-                    <option value="ready">Ready</option>
-                    <option value="under-construction">Construction</option>
-                    <option value="booking-open">Booking Open</option>
-                  </select>
-                </div>
-              </div>
-
-              {/* Submit Button */}
-              <Button
-                type="submit"
-                className="w-full md:w-auto bg-accent text-accent-foreground hover:bg-gold-dark hover:text-white font-bold rounded-xl px-8 flex items-center justify-center gap-2 cursor-pointer shadow-md transition-all self-center py-5 md:py-6"
-              >
-                <Search className="w-4 h-4" />
-                <span>Search</span>
-              </Button>
-            </form>
+            <Button
+              asChild
+              size="lg"
+              variant="outline"
+              className="border-white/20 bg-white/5 text-white hover:bg-white/10 hover:text-white font-bold rounded-full px-8 py-6 flex items-center gap-2 cursor-pointer backdrop-blur-sm transition-all"
+            >
+              <Link href="/#land-share">
+                <MapPin className="w-4 h-4" />
+                <span>Land Share Inquiry</span>
+              </Link>
+            </Button>
           </motion.div>
 
           {/* Stats Bar */}
@@ -162,30 +99,30 @@ export function Hero() {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ duration: 1, delay: 0.9 }}
-            className="flex flex-wrap items-center justify-center gap-8 md:gap-16 mt-16 text-white"
+            className="flex flex-wrap items-center justify-center gap-8 md:gap-16 text-white"
           >
             <div className="text-center">
               <span className="block text-2xl md:text-3xl font-black text-accent">
-                10+
+                100%
               </span>
               <span className="text-[10px] uppercase tracking-widest text-slate-400 font-bold mt-1 block">
-                Years of Trusted Delivery
+                Transparent Agreements
               </span>
             </div>
             <div className="text-center border-l border-white/10 pl-8 md:pl-16">
               <span className="block text-2xl md:text-3xl font-black text-accent">
-                10+
+                RAJUK
               </span>
               <span className="text-[10px] uppercase tracking-widest text-slate-400 font-bold mt-1 block">
-                Projects, Zero Compromises
+                Approval Support
               </span>
             </div>
             <div className="text-center border-l border-white/10 pl-8 md:pl-16">
               <span className="block text-2xl md:text-3xl font-black text-accent">
-                Best
+                On-Time
               </span>
               <span className="text-[10px] uppercase tracking-widest text-slate-400 font-bold mt-1 block">
-                Price-to-Value Ratio
+                Project Handover
               </span>
             </div>
           </motion.div>
