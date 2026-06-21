@@ -29,7 +29,7 @@ const navItems: NavItem[] = [
   {
     label: "About Us",
     dropdownItems: [
-      { label: "Our Story", href: "/#our-story" },
+      { label: "Our Purpose", href: "/#our-story" },
       { label: "Leadership", href: "/#leadership" },
       { label: "Our Mission", href: "/#our-story" },
     ],

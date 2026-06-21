@@ -49,9 +49,9 @@ export function Footer() {
               />
             </Link>
             <p className="text-sm text-slate-400 leading-relaxed mt-2">
-              For over 15 years, Khan Builders has engineered high-end
-              structural achievements. We don&apos;t just build spaces, we build
-              lasting architectural legacies.
+              Khan Builders Ltd. delivers reliable real estate solutions through
+              quality construction, modern planning, transparent documentation,
+              and timely handover.
             </p>
 
             {/* Social Icons */}
@@ -138,18 +138,10 @@ export function Footer() {
             <ul className="flex flex-col gap-3.5 text-sm font-semibold">
               <li>
                 <Link
-                  href="/properties?type=penthouse"
-                  className="hover:text-accent transition-colors"
-                >
-                  Luxury Penthouses
-                </Link>
-              </li>
-              <li>
-                <Link
                   href="/properties?type=residential"
                   className="hover:text-accent transition-colors"
                 >
-                  Residential Complexes
+                  Residential Apartments
                 </Link>
               </li>
               <li>
@@ -157,7 +149,7 @@ export function Footer() {
                   href="/properties?type=commercial"
                   className="hover:text-accent transition-colors"
                 >
-                  Commercial Landmarks
+                  Commercial Spaces
                 </Link>
               </li>
               <li>
@@ -165,7 +157,7 @@ export function Footer() {
                   href="/properties"
                   className="hover:text-accent transition-colors"
                 >
-                  Ongoing Projects
+                  Flat Booking & Sales
                 </Link>
               </li>
               <li>
@@ -173,7 +165,15 @@ export function Footer() {
                   href="/properties"
                   className="hover:text-accent transition-colors"
                 >
-                  Ready Key Properties
+                  Real Estate Investment
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="/land-share"
+                  className="hover:text-accent transition-colors"
+                >
+                  Land Share Development
                 </Link>
               </li>
             </ul>
@@ -188,20 +188,22 @@ export function Footer() {
               <li className="flex items-start gap-3">
                 <MapPin className="w-5 h-5 text-accent shrink-0 mt-0.5" />
                 <span>
-                  Khan Tower, Level 14,
+                  Kalapani Bridge Adjacent Area,
                   <br />
-                  Gulshan Avenue, Circle Two,
+                  Balughat - Mastertek Road,
                   <br />
-                  Dhaka-1212, Bangladesh
+                  Near Pallabi Thana, ECB - Kalshi 200 Feet Road adjacent area,
+                  <br />
+                  Dhaka-1216
                 </span>
               </li>
               <li className="flex items-center gap-3">
                 <Phone className="w-4 h-4 text-accent shrink-0" />
-                <span>+880 2-9887766, +880 1700000000</span>
+                <span>01712-117965, 01567-874806</span>
               </li>
               <li className="flex items-center gap-3">
                 <Mail className="w-4 h-4 text-accent shrink-0" />
-                <span>inquiries@khanbuilders.com</span>
+                <span></span>khanbuildersltd22@gmail.com
               </li>
             </ul>
           </div>
@@ -212,8 +214,8 @@ export function Footer() {
               Newsletter
             </h3>
             <p className="text-sm text-slate-400 leading-relaxed mb-4">
-              Subscribe to get exclusive first-option access to new property
-              listings.
+              Subscribe for updates on new projects, land share opportunities,
+              and booking openings.
             </p>
             <form onSubmit={handleSubscribe} className="flex flex-col gap-2">
               <input
@@ -237,8 +239,7 @@ export function Footer() {
         {/* Divider */}
         <div className="border-t border-white/5 pt-8 flex flex-col md:flex-row items-center justify-between gap-6">
           <div className="text-xs text-slate-500 font-semibold">
-            &copy; {new Date().getFullYear()} Khan Builders. Designed &
-            Engineered with Architectural Perfection.
+            © 2026 Khan Builders Ltd. Building Trust. Creating Better Living.
           </div>
 
           <div className="flex items-center gap-6 text-xs text-slate-500 font-semibold">
