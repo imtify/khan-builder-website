@@ -13,10 +13,7 @@ import {
   Award,
   Leaf,
   Timer,
-  Compass,
-  Hammer,
-  Paintbrush,
-  Key,
+  FileText,
   Building2,
   ArrowRight,
   Send,
@@ -34,8 +31,6 @@ export default async function Home() {
       <main className="flex-1">
         {/* Hero Section */}
         <Hero />
-
-        {/* Heritage / About Us Section */}
         {/* Our Mission Section */}
         <section
           id="our-story"
@@ -57,10 +52,10 @@ export default async function Home() {
                 {/* Floating card */}
                 <div className="absolute -bottom-6 -right-6 md:right-8 bg-card/95 backdrop-blur border border-accent/20 p-6 rounded-2xl shadow-xl max-w-xs text-left">
                   <span className="text-3xl font-black text-accent block">
-                    15+
+                    100%
                   </span>
                   <span className="text-xs font-bold uppercase tracking-wider text-muted-foreground block mt-1">
-                    Years of Honest Building
+                    Transparent Documentation
                   </span>
                 </div>
               </div>
@@ -68,48 +63,48 @@ export default async function Home() {
               {/* Right Side: Text details */}
               <div className="text-left flex flex-col items-start">
                 <span className="text-accent font-bold text-xs tracking-widest uppercase mb-2">
-                  Our Mission
+                  Our Purpose
                 </span>
                 <h2 className="text-3xl md:text-5xl font-black tracking-tight text-foreground leading-tight">
-                  Quality Construction with Transparent Commitment.
+                  We Build More Than Buildings
                 </h2>
 
                 <p className="text-muted-foreground mt-6 text-sm md:text-base leading-relaxed">
-                  To deliver reliable real estate solutions through quality
-                  construction, modern planning, transparent documentation and
-                  timely handover.
+                  Khan Builders Ltd. exists to create safe, modern, and
+                  value-driven living spaces while building long-term trust with
+                  landowners, apartment buyers, and investors.
                 </p>
 
                 <p className="text-muted-foreground mt-4 text-sm md:text-base leading-relaxed">
-                  We cut costs where buyers never see them — overhead, excess
-                  markups, unnecessary middlemen — and invest where it actually
-                  matters: structure, materials, and craftsmanship.
+                  Our vision is simple: to be a trusted, modern, and
+                  quality-driven real estate development company in Bangladesh —
+                  one transparent agreement, one well-built home at a time.
                 </p>
 
                 <div className="grid grid-cols-2 gap-6 w-full mt-8">
-                  <div className="flex gap-3">
-                    <div className="w-10 h-10 rounded-xl bg-accent/15 border border-accent/25 flex items-center justify-center shrink-0">
-                      <Award className="w-5 h-5 text-accent" />
-                    </div>
-                    <div>
-                      <h4 className="font-bold text-foreground text-sm">
-                        Fair Pricing
-                      </h4>
-                      <p className="text-xs text-muted-foreground mt-1">
-                        No hidden fees, no inflated markups.
-                      </p>
-                    </div>
-                  </div>
                   <div className="flex gap-3">
                     <div className="w-10 h-10 rounded-xl bg-accent/15 border border-accent/25 flex items-center justify-center shrink-0">
                       <ShieldCheck className="w-5 h-5 text-accent" />
                     </div>
                     <div>
                       <h4 className="font-bold text-foreground text-sm">
-                        Certified Safe
+                        Transparent Process
                       </h4>
                       <p className="text-xs text-muted-foreground mt-1">
-                        Exceeding international structural codes.
+                        Clear agreements, no hidden terms.
+                      </p>
+                    </div>
+                  </div>
+                  <div className="flex gap-3">
+                    <div className="w-10 h-10 rounded-xl bg-accent/15 border border-accent/25 flex items-center justify-center shrink-0">
+                      <Award className="w-5 h-5 text-accent" />
+                    </div>
+                    <div>
+                      <h4 className="font-bold text-foreground text-sm">
+                        Quality Supervision
+                      </h4>
+                      <p className="text-xs text-muted-foreground mt-1">
+                        Verified materials, disciplined construction.
                       </p>
                     </div>
                   </div>
@@ -147,8 +142,9 @@ export default async function Home() {
                 Why Clients Choose Us
               </h2>
               <p className="text-muted-foreground mt-4 text-sm md:text-base">
-                We maintain an uncompromising dedication to construction
-                quality, premium layouts, and timely project handovers.
+                We maintain disciplined execution, transparent partnership, and
+                quality construction for every landowner, buyer, and investor we
+                work with.
               </p>
             </div>
 
@@ -175,7 +171,7 @@ export default async function Home() {
                 },
                 {
                   icon: Timer,
-                  title: "Punctual Delivery",
+                  title: "On-time Delivery",
                   description:
                     "Strict project timelines managed by automated tracking, so handovers are always on time.",
                 },
@@ -236,42 +232,42 @@ export default async function Home() {
               <div className="lg:col-span-7 grid grid-cols-1 sm:grid-cols-2 gap-6">
                 {[
                   {
-                    icon: Compass,
-                    title: "Architectural Planning",
+                    icon: ShieldCheck,
+                    title: "Trust",
                     description:
-                      "Smart, space-efficient floor plans, energy-conscious design, and 3D walkthroughs before you commit.",
+                      "Long-term confidence for every client and landowner we work with — built one honest project at a time.",
                   },
                   {
-                    icon: Hammer,
-                    title: "Turnkey Construction",
+                    icon: Award,
+                    title: "Quality Construction",
                     description:
-                      "Structural engineering, foundation work, full construction, and site supervision — all under one roof.",
+                      "Verified materials, disciplined supervision, and durability standards with no shortcuts on safety.",
                   },
                   {
-                    icon: Paintbrush,
-                    title: "Interior Finishing",
+                    icon: FileText,
+                    title: "Transparency",
                     description:
-                      "Quality fixtures, practical lighting, and durable kitchen installations — no markup for a brand name.",
+                      "Clear agreements and complete documentation, including RAJUK approval support — nothing hidden.",
                   },
                   {
-                    icon: Key,
-                    title: "Asset Management",
+                    icon: Timer,
+                    title: "Timely Handover",
                     description:
-                      "Reliable facility upkeep, security coordination, and resident support, long after handover.",
+                      "Structured project timelines and disciplined supervision, so handovers happen when promised.",
                   },
-                ].map((service, idx) => (
+                ].map((item, idx) => (
                   <div
                     key={idx}
                     className="bg-card border border-border p-6 rounded-2xl text-left shadow-sm hover:border-accent/40 transition-colors"
                   >
                     <div className="w-10 h-10 rounded-xl bg-accent/15 flex items-center justify-center mb-4">
-                      <service.icon className="w-5 h-5 text-accent" />
+                      <item.icon className="w-5 h-5 text-accent" />
                     </div>
                     <h3 className="font-bold text-base text-foreground mb-2">
-                      {service.title}
+                      {item.title}
                     </h3>
                     <p className="text-xs text-muted-foreground leading-relaxed">
-                      {service.description}
+                      {item.description}
                     </p>
                   </div>
                 ))}
