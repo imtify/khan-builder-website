@@ -135,6 +135,7 @@ export function Header() {
             alt="Khan Builders Logo"
             width={48}
             height={48}
+            loading="eager"
             className="object-contain group-hover:scale-110 transition-transform"
           />
         </Link>

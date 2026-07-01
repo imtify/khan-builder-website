@@ -67,6 +67,7 @@ export default async function PropertyDetailPage({ params }: PageProps) {
               alt={property.title}
               fill
               className="object-cover"
+              style={property.imageFilter ? { filter: property.imageFilter } : undefined}
               priority
             />
             {/* Dark gradient overlay at bottom */}

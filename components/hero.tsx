@@ -13,7 +13,7 @@ export function Hero() {
       <div
         className="absolute inset-0 bg-cover bg-no-repeat transition-transform duration-10000 scale-110"
         style={{
-          backgroundImage: "url('/images/Hero2.png')",
+          backgroundImage: "url('/images/Hero.png')",
         }}
       />
 
@@ -23,7 +23,7 @@ export function Hero() {
 
       {/* Decorative Golden Ambient Light */}
       <div className="absolute -top-40 right-0 w-[500px] h-[500px] rounded-full bg-accent/5 blur-[120px] pointer-events-none z-0 animate-pulse duration-3000" />
-      <div className="absolute -bottom-40 left-0 w-[500px] h-[500px] rounded-full bg-accent/5 blur-[120px] pointer-events-none z-0" />
+      <div className="absolute -bottom-40 left-0 w-[500px] h-[500px] rounded-full bg-accent/5 blur-[120px] pointer-events-none z-0 animate-pulse duration-3000" />
 
       <div className="container mx-auto px-4 md:px-6 relative z-10 w-full">
         <div className="max-w-4xl mx-auto text-center flex flex-col items-center">
@@ -32,9 +32,9 @@ export function Hero() {
             initial={{ opacity: 0, y: -20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
-            className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full border border-accent/20 bg-accent/10 text-accent font-semibold text-xs tracking-wider uppercase mb-6"
+            className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full border border-green-500/20 bg-green-500/10 text-green-500 font-semibold text-xs tracking-wider uppercase mb-6"
           >
-            <span className="w-1.5 h-1.5 rounded-full bg-accent animate-ping" />
+            <span className="w-1.5 h-1.5 rounded-full bg-green-500 animate-ping" />
             Quality Construction. Transparent Commitment.
           </motion.div>
 
@@ -87,7 +87,7 @@ export function Hero() {
               variant="outline"
               className="border-white/20 bg-white/5 text-white hover:bg-white/10 hover:text-white font-bold rounded-full px-8 py-6 flex items-center gap-2 cursor-pointer backdrop-blur-sm transition-all"
             >
-              <Link href="/#land-share">
+              <Link href="/#contact">
                 <MapPin className="w-4 h-4" />
                 <span>Land Share Inquiry</span>
               </Link>

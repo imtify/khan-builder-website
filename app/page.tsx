@@ -42,7 +42,7 @@ export default async function Home() {
               <div className="relative">
                 <div className="relative h-[480px] w-full rounded-3xl overflow-hidden shadow-xl shadow-gold border border-border">
                   <Image
-                    src="/images/prop_imperial_heights.jpg"
+                    src="/images/Building.jpg"
                     alt="Khan Builders Quality Construction"
                     fill
                     className="object-cover"
@@ -277,7 +277,7 @@ export default async function Home() {
         </section>
 
         {/* Contact Form Section */}
-        <section className="py-24 bg-muted/30 relative">
+        <section id="contact" className="py-24 bg-muted/30 relative">
           <div className="container mx-auto px-4 md:px-6">
             <div className="max-w-4xl mx-auto rounded-3xl border border-border bg-card shadow-lg p-8 md:p-12 text-left relative overflow-hidden">
               {/* Glow accent */}
