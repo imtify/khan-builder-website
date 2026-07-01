@@ -14,9 +14,18 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Khan Builders | Luxury Real Estate & Premium Developers",
-  description: "Experience unparalleled architectural craftsmanship and premium residential and commercial developments with Khan Builders. Discover luxury penthouses, custom estates, and commercial landmarks.",
-  keywords: ["Khan Builders", "Real Estate", "Luxury Properties", "Premium Developers", "Construction", "Apartments", "Commercial Landmarks"],
+  title: "Khan Builders",
+  description:
+    "Experience unparalleled architectural craftsmanship and premium residential and commercial developments with Khan Builders. Discover luxury penthouses, custom estates, and commercial landmarks.",
+  keywords: [
+    "Khan Builders",
+    "Real Estate",
+    "Luxury Properties",
+    "Premium Developers",
+    "Construction",
+    "Apartments",
+    "Commercial Landmarks",
+  ],
   authors: [{ name: "Khan Builders" }],
 };
 
@@ -34,7 +43,7 @@ export default function RootLayout({
       <body className="min-h-full flex flex-col bg-background text-foreground">
         <ThemeProvider
           attribute="class"
-          defaultTheme="system"
+          defaultTheme="light"
           enableSystem
           disableTransitionOnChange
         >
@@ -44,4 +53,3 @@ export default function RootLayout({
     </html>
   );
 }
-
